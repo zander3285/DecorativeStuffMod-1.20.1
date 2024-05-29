@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.zander46.DecorativeStuff.DecorativeStuffMod;
+import net.zander46.DecorativeStuff.block.ModBlocks;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -19,6 +20,7 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.decorative_stuff_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.SPEAR.get());
+                        output.accept(ModBlocks.PACKED_TERRACOTTA.get());
                     })
                     .build());
 
