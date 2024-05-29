@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.zander46.DecorativeStuff.item.ModCreativeModTabs;
 import net.zander46.DecorativeStuff.item.ModItems;
 import org.slf4j.Logger;
 
@@ -23,6 +24,8 @@ public class DecorativeStuffMod {
 
     public DecorativeStuffMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
@@ -38,9 +41,6 @@ public class DecorativeStuffMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.SPEAR);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
