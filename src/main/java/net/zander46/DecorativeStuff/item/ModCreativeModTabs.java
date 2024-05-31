@@ -20,6 +20,8 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.decorative_stuff_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.SPEAR.get());
+
+                        output.accept(ModBlocks.SPEARED_PACKED_TERRACOTTA.get());
                         output.accept(ModBlocks.PACKED_TERRACOTTA.get());
                     })
                     .build());

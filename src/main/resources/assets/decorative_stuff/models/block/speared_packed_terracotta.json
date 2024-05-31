@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "decorative_stuff:block/speared_packed_terracotta"
+  }
+}

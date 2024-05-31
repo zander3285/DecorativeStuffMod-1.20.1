@@ -12,7 +12,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, DecorativeStuffMod.MOD_ID);
 
     public static final RegistryObject<Item> SPEAR = ITEMS.register("spear",
-            ()-> new Item(new Item.Properties()));
+            ()-> new Item(new Item.Properties().durability(400)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

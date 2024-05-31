@@ -21,6 +21,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> PACKED_TERRACOTTA = registryBlock("packed_terracotta",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).strength(2.5F)));
 
+    public static final RegistryObject<Block> SPEARED_PACKED_TERRACOTTA = registryBlock("speared_packed_terracotta",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).strength(2.5F)));
+
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
